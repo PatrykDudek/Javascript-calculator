@@ -1,0 +1,133 @@
+*,
+::after,
+::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(33, 32, 186);
+	background: linear-gradient(
+		140deg,
+		rgba(33, 32, 186, 1) 4%,
+		rgba(50, 210, 222, 1) 47%,
+		rgba(144, 184, 214, 1) 87%
+	);
+}
+
+.calculator {
+	height: 60vh;
+	min-width: 380px;
+	max-width: 380px;
+}
+
+.display {
+	width: 100%;
+	min-height: 20%;
+	max-height: min-content;
+	background-color: rgba(29, 27, 27, 0.25);
+	-webkit-box-shadow: 3px 22px 75px 0px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 3px 22px 75px 0px rgba(66, 68, 90, 1);
+	box-shadow: 3px 22px 75px 0px rgba(66, 68, 90, 1);
+	color: white;
+	text-align: right;
+	word-break: break-all;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-right: 10px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.currentNumber {
+	font-size: 36px;
+}
+
+.previousNumber {
+	color: rgba(177, 177, 177, 0.667);
+	font-size: 20px;
+}
+
+
+.panel {
+	height: 80%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 2px;
+}
+
+.panel button {
+	font-size: 24px;
+	background-color: rgba(0, 0, 0, 0.35);
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+.panel button:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.equals{
+    grid-row: -1/-3;
+    grid-column: -2/-1;
+}
+
+.calculator-history{
+    height: 60vh;
+    width: 150px;
+    margin: 20px;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1.8px;
+    background-color: rgba(29, 27, 27, 0.25);
+    text-align: center;
+    -webkit-box-shadow: 49px 11px 100px -35px rgba(66, 68, 90, 1);
+-moz-box-shadow: 49px 11px 100px -35px rgba(66, 68, 90, 1);
+box-shadow: 49px 11px 100px -35px rgba(66, 68, 90, 1);
+}
+.history-title{
+    padding-bottom: 10px;
+}
+.history-btn{
+    color: white;
+    background-color: rgba(29, 27, 27, 0.35);
+    border: none;
+    font-size: 14px;
+    padding: 8px 10px ;
+    margin: 8px auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    display: none;
+    outline: none;
+}
+.history-btn:hover{
+    background-color: rgba(29, 27, 27, 0.55);
+}
+.history-btn.active{
+display: block;
+}
+.history{
+    list-style: none;
+}
+
+.history-item{
+    border-bottom: 1px solid rgba(29, 27, 27, 0.25);
+    margin: 5px;
+    padding-bottom: 2px;
+}
